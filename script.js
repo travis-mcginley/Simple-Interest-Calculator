@@ -25,15 +25,15 @@ let compute = () => {
         // Calculate the interest using the given params
         interest = principal.value * years * rate / 100;
         
-        // Build result string
-        result_str += "If you deposit $";
-        result_str += principal.value;
+        // Build result string -- highlight and bold all values
+        result_str += "If you deposit ";
+        result_str += "<mark><b>$" + principal.value + "</b></mark>";
         result_str += " today, at an interest rate of ";
-        result_str += rate;
-        result_str += "%, you will receive an amout of $";
-        result_str += interest;
+        result_str += "<mark><b>" + rate + "%</b></mark>";
+        result_str += ", you will receive an amout of ";
+        result_str += "<mark><b>$" + interest + "</b></mark>";
         result_str += " in the year ";
-        result_str += year;
+        result_str += "<mark><b>" + year + "</b></mark>";
         result_str += " &#128526;"; // Cool-guy emoji
     }
     
