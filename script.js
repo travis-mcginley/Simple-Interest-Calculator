@@ -1,5 +1,6 @@
 // Function to compute the interest using user-defined values
 let compute = () => {
+    
     // Gather user-defined values
     let principal   = document.getElementById("principal");
     let rate        = document.getElementById("rate").value;
@@ -9,10 +10,14 @@ let compute = () => {
     // If the amount field is empty, prompt the user to input a value
     let result_str = ""
     if (principal.value == "") {
-        result_str = "You forgot to input a value &#128517;";
+    
+        // &#128517; == embarrassed emoji
+        result_str = "You didn't put a number &#128517;";
         principal.focus();
 
     } else if (principal.value <= 0) {
+    
+        // &#129300; == thinking emoji
         result_str = "Try putting a number greater than zero &#129300;";
     
     } else {
@@ -29,9 +34,10 @@ let compute = () => {
         result_str += interest;
         result_str += " in the year ";
         result_str += year;
-        result_str += " &#128526;";
+        result_str += " &#128526;"; // Cool-guy emoji
     }
     
+    // Show string below compute button
     document.getElementById("result").innerHTML = result_str;
 }
 
